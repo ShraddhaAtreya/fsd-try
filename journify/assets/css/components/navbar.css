@@ -1,0 +1,60 @@
+.navbar {
+    background-color: #ffffff; /* Light background for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333; /* Dark text color for the logo */
+    text-decoration: none;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .menu a {
+    color: #333333; /* Dark text color for menu items */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.navbar .user-menu {
+    position: relative;
+}
+
+.navbar .user-menu .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff; /* Light background for dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .user-menu:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.navbar .user-menu .dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333333; /* Dark text color for dropdown items */
+    text-decoration: none;
+}
+
+.navbar .user-menu .dropdown a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}

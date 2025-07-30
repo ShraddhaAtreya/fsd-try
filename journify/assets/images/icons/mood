@@ -1,0 +1,23 @@
+The directory for mood-related emoji/icons is intended to contain image files representing different moods. Below are some example image files that could be included in the `/journify/journify/assets/images/icons/mood` directory:
+
+- happy.png
+- sad.png
+- angry.png
+- anxious.png
+- calm.png
+- excited.png
+- neutral.png
+
+You can create these image files using any graphic design tool or download them from a free icon resource. The actual images should be placed in the specified directory. 
+
+Here’s how the contents of the `/journify/journify/assets/images/icons/mood` directory would look:
+
+happy.png
+sad.png
+angry.png
+anxious.png
+calm.png
+excited.png
+neutral.png
+
+Make sure to name the files according to the mood they represent for easy identification and use in your application.

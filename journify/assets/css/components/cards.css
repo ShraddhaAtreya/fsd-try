@@ -1,0 +1,61 @@
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1.5rem; /* Padding inside the card */
+    margin: 1rem; /* Margin around the card */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.card:hover {
+    background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+.card-header {
+    font-size: 1.25rem; /* Larger font size for card header */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 0.5rem; /* Space below the header */
+}
+
+.card-content {
+    font-size: 1rem; /* Standard font size for card content */
+    color: #333333; /* Dark gray text color */
+}
+
+.card-footer {
+    display: flex; /* Flexbox for footer layout */
+    justify-content: space-between; /* Space between footer items */
+    margin-top: 1rem; /* Space above the footer */
+}
+
+.mood-card {
+    cursor: pointer; /* Pointer cursor for mood cards */
+}
+
+.mood-card.happy {
+    background-color: #d4edda; /* Light green for happy mood */
+}
+
+.mood-card.sad {
+    background-color: #cce5ff; /* Light blue for sad mood */
+}
+
+.mood-card.angry {
+    background-color: #f8d7da; /* Light red for angry mood */
+}
+
+.mood-card.anxious {
+    background-color: #fff3cd; /* Light yellow for anxious mood */
+}
+
+.mood-card.calm {
+    background-color: #e2e3e5; /* Light gray for calm mood */
+}
+
+.mood-card.excited {
+    background-color: #d1ecf1; /* Light cyan for excited mood */
+}
+
+.mood-card.neutral {
+    background-color: #f8f9fa; /* Light neutral color */
+}

@@ -1,0 +1,98 @@
+<div class="modal" id="day-detail-modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Day Detail</h2>
+        <div class="mood-detail">
+            <h3>Mood: <span id="mood-display"></span></h3>
+            <p id="mood-note"></p>
+        </div>
+        <div class="journal-entry">
+            <h3>Journal Entry</h3>
+            <p><strong>What went well today?</strong></p>
+            <p id="went-well"></p>
+            <p><strong>What could be improved?</strong></p>
+            <p id="could-improve"></p>
+            <p><strong>Goal for tomorrow:</strong></p>
+            <p id="goal-tomorrow"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" onclick="editEntry()">Edit Entry</button>
+            <button class="btn" onclick="deleteEntry()">Delete Entry</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(mood, moodNote, wentWell, couldImprove, goalTomorrow) {
+        document.getElementById('mood-display').innerText = mood;
+        document.getElementById('mood-note').innerText = moodNote;
+        document.getElementById('went-well').innerText = wentWell;
+        document.getElementById('could-improve').innerText = couldImprove;
+        document.getElementById('goal-tomorrow').innerText = goalTomorrow;
+        document.getElementById('day-detail-modal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('day-detail-modal').style.display = 'none';
+    }
+
+    function editEntry() {
+        // Logic to edit the entry
+    }
+
+    function deleteEntry() {
+        // Logic to delete the entry
+    }
+</script>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 8px;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+</style>

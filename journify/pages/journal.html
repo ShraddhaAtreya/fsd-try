@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journify - Journal</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/journal.css">
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/pages/journal.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Include Navbar -->
+            <div id="navbar"></div>
+        </header>
+        <aside>
+            <!-- Include Sidebar -->
+            <div id="sidebar"></div>
+        </aside>
+        <main>
+            <h1>Journal Entry</h1>
+            <div class="mood-selection">
+                <h2>Select Your Mood</h2>
+                <div class="mood-buttons">
+                    <button class="mood-btn" data-mood="happy" style="background-color: green;">😊 Happy</button>
+                    <button class="mood-btn" data-mood="sad" style="background-color: blue;">😢 Sad</button>
+                    <button class="mood-btn" data-mood="angry" style="background-color: red;">😠 Angry</button>
+                    <button class="mood-btn" data-mood="anxious" style="background-color: orange;">😟 Anxious</button>
+                    <button class="mood-btn" data-mood="calm" style="background-color: lightblue;">😌 Calm</button>
+                    <button class="mood-btn" data-mood="excited" style="background-color: yellow;">😃 Excited</button>
+                    <button class="mood-btn" data-mood="neutral" style="background-color: gray;">😐 Neutral</button>
+                </div>
+            </div>
+            <div class="journal-form">
+                <h2>Your Journal Entry</h2>
+                <textarea id="wentWell" placeholder="What went well today?"></textarea>
+                <textarea id="couldImprove" placeholder="What could be improved?"></textarea>
+                <textarea id="tomorrowGoal" placeholder="Goal for tomorrow?"></textarea>
+                <button id="saveEntry">Save Entry</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Journify. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const moodButtons = document.querySelectorAll('.mood-btn');
+        const journalForm = document.querySelector('.journal-form');
+
+        moodButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const mood = button.getAttribute('data-mood');
+                document.body.style.backgroundColor = button.style.backgroundColor;
+                // Additional logic to handle mood selection can be added here
+            });
+        });
+
+        document.getElementById('saveEntry').addEventListener('click', () => {
+            const wentWell = document.getElementById('wentWell').value;
+            const couldImprove = document.getElementById('couldImprove').value;
+            const tomorrowGoal = document.getElementById('tomorrowGoal').value;
+            // Logic to save the journal entry can be added here
+        });
+    </script>
+</body>
+</html>

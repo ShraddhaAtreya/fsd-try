@@ -1,0 +1,24 @@
+<div class="mood-selector">
+    <h2>Select Your Mood</h2>
+    <div class="mood-options">
+        <button class="mood-btn" data-mood="happy" style="background-color: green;">😊 Happy</button>
+        <button class="mood-btn" data-mood="sad" style="background-color: blue;">😢 Sad</button>
+        <button class="mood-btn" data-mood="angry" style="background-color: red;">😠 Angry</button>
+        <button class="mood-btn" data-mood="anxious" style="background-color: orange;">😟 Anxious</button>
+        <button class="mood-btn" data-mood="calm" style="background-color: lightblue;">😌 Calm</button>
+        <button class="mood-btn" data-mood="excited" style="background-color: yellow;">😃 Excited</button>
+        <button class="mood-btn" data-mood="neutral" style="background-color: gray;">😐 Neutral</button>
+    </div>
+</div>
+
+<script>
+    const moodButtons = document.querySelectorAll('.mood-btn');
+    moodButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const mood = button.getAttribute('data-mood');
+            document.body.style.backgroundColor = button.style.backgroundColor;
+            console.log(`Mood selected: ${mood}`);
+            // Additional logic to handle mood selection can be added here
+        });
+    });
+</script>

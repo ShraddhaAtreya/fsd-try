@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Step 2 - Journify</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/pages/onboarding.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <header class="onboarding-header">
+            <h1>Welcome to Journify!</h1>
+            <p>Let's continue your journey to better mood tracking.</p>
+        </header>
+        <main class="onboarding-content">
+            <section class="onboarding-step">
+                <h2>Step 2: Mood Selection</h2>
+                <p>Select your current mood from the options below:</p>
+                <div class="mood-options">
+                    <button class="mood-button" data-mood="happy" style="background-color: green;">😊 Happy</button>
+                    <button class="mood-button" data-mood="sad" style="background-color: blue;">😢 Sad</button>
+                    <button class="mood-button" data-mood="angry" style="background-color: red;">😡 Angry</button>
+                    <button class="mood-button" data-mood="anxious" style="background-color: orange;">😟 Anxious</button>
+                    <button class="mood-button" data-mood="calm" style="background-color: lightblue;">😌 Calm</button>
+                    <button class="mood-button" data-mood="excited" style="background-color: yellow;">😃 Excited</button>
+                    <button class="mood-button" data-mood="neutral" style="background-color: gray;">😐 Neutral</button>
+                </div>
+            </section>
+            <div class="onboarding-navigation">
+                <button id="next-step" class="next-button">Next Step</button>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/auth/onboarding.js"></script>
+</body>
+</html>

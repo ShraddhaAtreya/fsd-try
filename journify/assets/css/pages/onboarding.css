@@ -1,0 +1,99 @@
+body {
+    background-color: #f0f4f8; /* Light background for onboarding */
+    font-family: 'Inter', sans-serif; /* Use a clean, readable font */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.onboarding-container {
+    width: 90%;
+    max-width: 600px; /* Limit width for better readability */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the container */
+    text-align: center; /* Center text */
+}
+
+.onboarding-step {
+    margin-bottom: 20px; /* Space between steps */
+}
+
+.onboarding-title {
+    font-size: 24px; /* Larger font for titles */
+    font-weight: bold; /* Bold titles */
+    margin-bottom: 10px; /* Space below titles */
+}
+
+.onboarding-description {
+    font-size: 16px; /* Standard font size for descriptions */
+    margin-bottom: 20px; /* Space below descriptions */
+}
+
+.button {
+    background-color: #4a90e2; /* Primary button color */
+    color: white; /* White text on buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px 20px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #357ab8; /* Darker shade on hover */
+}
+
+.mood-selector {
+    display: flex; /* Flexbox for mood buttons */
+    justify-content: space-around; /* Space between buttons */
+    margin-top: 20px; /* Space above mood selector */
+}
+
+.mood-button {
+    width: 50px; /* Fixed width for mood buttons */
+    height: 50px; /* Fixed height for mood buttons */
+    border-radius: 50%; /* Circular buttons */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s; /* Smooth scale effect */
+}
+
+.mood-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Mood color coding */
+.mood-happy {
+    background-color: #4caf50; /* Green for happy */
+}
+
+.mood-sad {
+    background-color: #2196f3; /* Blue for sad */
+}
+
+.mood-angry {
+    background-color: #f44336; /* Red for angry */
+}
+
+.mood-anxious {
+    background-color: #ff9800; /* Orange for anxious */
+}
+
+.mood-calm {
+    background-color: #9c27b0; /* Purple for calm */
+}
+
+.mood-excited {
+    background-color: #ffeb3b; /* Yellow for excited */
+}
+
+.mood-neutral {
+    background-color: #9e9e9e; /* Grey for neutral */
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Journify</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css">
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/pages/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Include Navbar -->
+            <div id="navbar"></div>
+        </header>
+        <aside>
+            <!-- Include Sidebar -->
+            <div id="sidebar"></div>
+        </aside>
+        <main>
+            <h1>Welcome to Journify</h1>
+            <section class="mood-entry">
+                <h2>Daily Mood Entry</h2>
+                <div class="mood-buttons">
+                    <button class="mood-btn" data-mood="happy" style="background-color: green;">😊 Happy</button>
+                    <button class="mood-btn" data-mood="sad" style="background-color: blue;">😢 Sad</button>
+                    <button class="mood-btn" data-mood="angry" style="background-color: red;">😡 Angry</button>
+                    <button class="mood-btn" data-mood="anxious" style="background-color: orange;">😟 Anxious</button>
+                    <button class="mood-btn" data-mood="calm" style="background-color: lightblue;">😌 Calm</button>
+                    <button class="mood-btn" data-mood="excited" style="background-color: yellow;">😃 Excited</button>
+                    <button class="mood-btn" data-mood="neutral" style="background-color: gray;">😐 Neutral</button>
+                </div>
+                <textarea id="mood-note" placeholder="Describe your mood..."></textarea>
+                <button id="submit-mood">Submit Mood</button>
+            </section>
+            <section class="daily-quote">
+                <h2>Daily Quote</h2>
+                <p id="quote">"Track how you feel. Transform how you live."</p>
+            </section>
+            <section class="recent-entries">
+                <h2>Recent Entries</h2>
+                <ul id="entries-list">
+                    <!-- Recent entries will be populated here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        const moodButtons = document.querySelectorAll('.mood-btn');
+        const moodNote = document.getElementById('mood-note');
+        const entriesList = document.getElementById('entries-list');
+
+        moodButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.body.style.backgroundColor = button.style.backgroundColor;
+                moodNote.focus();
+            });
+        });
+
+        document.getElementById('submit-mood').addEventListener('click', () => {
+            const mood = document.querySelector('.mood-btn[style*="background-color: ' + document.body.style.backgroundColor + '"]');
+            if (mood) {
+                const entry = document.createElement('li');
+                entry.textContent = `${mood.dataset.mood}: ${moodNote.value}`;
+                entriesList.appendChild(entry);
+                moodNote.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

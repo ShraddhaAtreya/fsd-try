@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Journify</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/analytics.css">
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/pages/analytics.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Include Navbar -->
+            <div id="navbar"></div>
+        </header>
+        <aside>
+            <!-- Include Sidebar -->
+            <div id="sidebar"></div>
+        </aside>
+        <main>
+            <h1>Analytics Dashboard</h1>
+            <section class="analytics-charts">
+                <div class="chart-container">
+                    <canvas id="moodTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="moodDistributionChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sentimentAnalysisChart"></canvas>
+                </div>
+            </section>
+            <section class="analytics-summary">
+                <h2>Summary</h2>
+                <p id="summaryText">Loading summary...</p>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Load Navbar and Sidebar
+        document.getElementById('navbar').innerHTML = `<script src="../components/navbar.html"></script>`;
+        document.getElementById('sidebar').innerHTML = `<script src="../components/sidebar.html"></script>`;
+    </script>
+</body>
+</html>

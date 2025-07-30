@@ -1,0 +1,46 @@
+<div class="modal" id="moodEntryModal">
+    <div class="modal-content">
+        <span class="close" id="closeMoodEntry">&times;</span>
+        <h2>Log Your Mood</h2>
+        <div class="mood-buttons">
+            <button class="mood-btn" data-mood="happy" style="background-color: green;">😊 Happy</button>
+            <button class="mood-btn" data-mood="sad" style="background-color: blue;">😢 Sad</button>
+            <button class="mood-btn" data-mood="angry" style="background-color: red;">😠 Angry</button>
+            <button class="mood-btn" data-mood="anxious" style="background-color: orange;">😟 Anxious</button>
+            <button class="mood-btn" data-mood="calm" style="background-color: lightblue;">😌 Calm</button>
+            <button class="mood-btn" data-mood="excited" style="background-color: yellow;">😃 Excited</button>
+            <button class="mood-btn" data-mood="neutral" style="background-color: gray;">😐 Neutral</button>
+        </div>
+        <textarea id="moodNote" placeholder="Describe your mood..." rows="4"></textarea>
+        <button id="saveMoodEntry" class="btn">Save Entry</button>
+    </div>
+</div>
+
+<script>
+    const moodButtons = document.querySelectorAll('.mood-btn');
+    const moodEntryModal = document.getElementById('moodEntryModal');
+    const closeMoodEntry = document.getElementById('closeMoodEntry');
+    const saveMoodEntry = document.getElementById('saveMoodEntry');
+    const moodNote = document.getElementById('moodNote');
+
+    moodButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            document.body.style.backgroundColor = button.style.backgroundColor;
+            moodNote.focus();
+        });
+    });
+
+    closeMoodEntry.onclick = function() {
+        moodEntryModal.style.display = "none";
+        document.body.style.backgroundColor = ""; // Reset background color
+    }
+
+    saveMoodEntry.onclick = function() {
+        const selectedMood = Array.from(moodButtons).find(button => button.style.backgroundColor === document.body.style.backgroundColor);
+        const moodDescription = moodNote.value;
+        // Save the mood entry logic here
+        console.log(`Mood: ${selectedMood ? selectedMood.dataset.mood : 'None'}, Note: ${moodDescription}`);
+        moodEntryModal.style.display = "none";
+        document.body.style.backgroundColor = ""; // Reset background color
+    }
+</script>

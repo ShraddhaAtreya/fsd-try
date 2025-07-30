@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Journify</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <header>
+            <h1>Settings</h1>
+        </header>
+        <nav>
+            <!-- Include the navigation bar here -->
+            <div id="navbar"></div>
+        </nav>
+        <main>
+            <section class="theme-settings">
+                <h2>Theme Settings</h2>
+                <label for="theme-toggle">Dark Mode:</label>
+                <input type="checkbox" id="theme-toggle">
+            </section>
+            <section class="account-management">
+                <h2>Account Management</h2>
+                <form id="account-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Update Profile</button>
+                </form>
+            </section>
+            <section class="data-management">
+                <h2>Data Management</h2>
+                <button id="export-data">Export All Data</button>
+                <button id="delete-account">Delete Account</button>
+            </section>
+            <section class="notification-preferences">
+                <h2>Notification Preferences</h2>
+                <label for="daily-reminder">Daily Reminder:</label>
+                <input type="checkbox" id="daily-reminder">
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Journify. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/settings.js"></script>
+</body>
+</html>

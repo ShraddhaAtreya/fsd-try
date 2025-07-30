@@ -1,0 +1,62 @@
+<div class="streak-counter">
+    <h2 class="streak-title">Current Streak</h2>
+    <div class="streak-display">
+        <span class="streak-count" id="streakCount">0</span>
+        <span class="streak-label">days</span>
+    </div>
+    <p class="streak-message" id="streakMessage">Keep it going!</p>
+</div>
+
+<style>
+    .streak-counter {
+        background-color: #f0f4f8;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .streak-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .streak-display {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #4caf50; /* Green color for positive streak */
+    }
+
+    .streak-label {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .streak-message {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
+</style>
+
+<script>
+    // Sample JavaScript to update the streak counter
+    let currentStreak = 0; // This would be dynamically updated based on user data
+
+    function updateStreakCounter() {
+        const streakCountElement = document.getElementById('streakCount');
+        const streakMessageElement = document.getElementById('streakMessage');
+
+        streakCountElement.textContent = currentStreak;
+
+        if (currentStreak > 0) {
+            streakMessageElement.textContent = "Keep it going!";
+        } else {
+            streakMessageElement.textContent = "Start your journey!";
+        }
+    }
+
+    // Call the function to initialize the display
+    updateStreakCounter();
+</script>

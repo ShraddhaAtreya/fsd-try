@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journify - Calendar</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/calendar.css">
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/pages/calendar.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Include Navbar -->
+            <div id="navbar"></div>
+        </header>
+        <aside>
+            <!-- Include Sidebar -->
+            <div id="sidebar"></div>
+        </aside>
+        <main>
+            <h1 class="page-title">Mood Calendar</h1>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prev-month">Previous</button>
+                    <h2 id="month-year"></h2>
+                    <button id="next-month">Next</button>
+                </div>
+                <div class="calendar-grid">
+                    <!-- Days will be dynamically generated here -->
+                </div>
+            </div>
+            <div class="mood-legend">
+                <h3>Mood Legend</h3>
+                <div class="legend-item" data-mood="happy" style="background-color: green;">Happy</div>
+                <div class="legend-item" data-mood="sad" style="background-color: blue;">Sad</div>
+                <div class="legend-item" data-mood="angry" style="background-color: red;">Angry</div>
+                <div class="legend-item" data-mood="anxious" style="background-color: yellow;">Anxious</div>
+                <div class="legend-item" data-mood="calm" style="background-color: lightblue;">Calm</div>
+                <div class="legend-item" data-mood="excited" style="background-color: orange;">Excited</div>
+                <div class="legend-item" data-mood="neutral" style="background-color: gray;">Neutral</div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Load Navbar and Sidebar
+        document.getElementById('navbar').innerHTML = '<!-- Navbar HTML goes here -->';
+        document.getElementById('sidebar').innerHTML = '<!-- Sidebar HTML goes here -->';
+    </script>
+</body>
+</html>

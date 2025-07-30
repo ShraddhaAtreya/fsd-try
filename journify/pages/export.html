@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Journal - Journify</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pages/export.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Export Your Journal</h1>
+        </header>
+        <main>
+            <section class="export-options">
+                <h2>Select Export Options</h2>
+                <form id="export-form">
+                    <div class="form-group">
+                        <label for="date-range">Date Range:</label>
+                        <input type="text" id="date-range" placeholder="Select date range">
+                    </div>
+                    <div class="form-group">
+                        <label for="export-type">Export Type:</label>
+                        <select id="export-type">
+                            <option value="full">Full Journal</option>
+                            <option value="highlights">Highlights Only</option>
+                            <option value="therapist">Therapist-Friendly Format</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Export Journal</button>
+                    </div>
+                </form>
+            </section>
+            <section class="export-history">
+                <h2>Export History</h2>
+                <ul id="export-history-list">
+                    <!-- Export history will be populated here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/export.js"></script>
+</body>
+</html>
